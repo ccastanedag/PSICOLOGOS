@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>PSICÓLOGOS PERÚ</title>
+  <meta name="description" content="Psicólogos Perú">
+  <meta name="author" content="Carlos Castañeda">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <!-- El header incluye Logo + Contáctenos -->
+  <div class="wrapper">
+    <header>
+      <div class="container clearfix">
+        <img src="img/logo.svg" alt="Psicólogos Perú" class="main-logo">
+        <div class="contact">
+          <div class="call-us">
+            <h3>LLÁMANOS </h3>
+            <h1>(01)452-7913</h1>
+          </div>
+          <div class="contact-info">
+            <ul>
+              <li></li>
+              <li>citas@psicologosperu.com</li>
+              <li>Av. Arequipa 769 Lince</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Links de navegación Principal, Quiénes Somos, Terapias, Citas -->
+    <nav>
+      <!--<div class="container">-->
+        <ul class="nav-links">
+          <li><a href="index.html">PRINCIPAL</a></li>
+          <li><a href="quienes-somos.html">QUIÉNES SOMOS</a></li>
+          <li><a href="terapias.html">TERAPIAS</a></li>
+          <li><a class ="selected" href="#">CITAS</a></li>
+        </ul>
+      <!--</div> -->
+    </nav>
+
+    <div class="container">
+      <div class="contact-by-phone grey-font">
+        <h1>Llámenos</h1>
+        <p>Reserve su cita llamándonos al <a href="tel:+5114527913">(01)452-7913</a> </p>
+      </div>
+      <div class="contact-by-form grey-font">
+        <h1>Escríbanos</h1>
+        <p>Si tiene alguna consulta directa puede escribirnos al correo <a href="mailto:citas@psicologosperu.com">citas@psicologosperu.com</a> o llenando el formulario a continuación:</p>
+        <form action="index.html" method="post">
+          <div class="contact-form">
+            <p>
+              <label for="name">NOMBRE</label>
+              <input id="name" type="text" name="name" value="" required placeholder="Ingrese su nombre">
+
+            </p>
+
+            <p>
+              <label for="email">EMAIL</label>
+              <input id="email" type="email" name="email" value="" required placeholder="Ingrese su email">
+            </p>
+
+            <p>
+              <label for="subject">TERAPIA</label>
+              <select id="subject" class="" name="subject">
+                <option value="individual">Terapia Individual</option>
+                <option value="pareja">Terapia para Parejas</option>
+                <option value="familia">Terapia para Familias</option>
+                <option value="nino">Terapia para Niños</option>
+                <option value="adiccion">Transtornos y adicciones</option>
+                <option value="consulta">Otras Consultas</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="message">MENSAJE</label>
+              <textarea id ="message" name="message" required placeholder="Escriba su mensaje"></textarea>
+            </p>
+
+            <button type="submit" name="button">ENVIAR MENSAJE</button>
+
+          </div>
+        </form>
+      </div>
+      <div class="contact-by-location grey-font">
+        <h1>Visítenos</h1>
+        <p>Puede visitarnos en nuestra cede central en Av. Arequipa 769 Lince.</p>
+        <div id="map"></div>
+        <script>
+          function initMap() {
+            var uluru = {lat: -12.078719, lng: -77.034145};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 17,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+      </script>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container clearfix">
+      <div class="siguenos">
+        <h3 class="grey-font">Síguenos</h3>
+        <ul class="social-networks clearfix">
+          <li><a href="#"><img src="img/facebook.svg" alt="facebook"></a></li>
+          <li><a href="#"><img src="img/twitter.svg" alt="twitter"></a></li>
+          <li><a href="#"><img src="img/google-plus.svg" alt="google plus"></a></li>
+          <li><a href="#"><img src="img/linkedin.svg" alt="linkedin"></a></li>
+          <li><a href="#"><img src="img/pinterest.svg" alt="pinterest"></a></li>
+          <li><a href="#"><img src="img/youtube-1.svg" alt="youtube"></a></li>
+          <li><a href="#"><img src="img/social-media-1.svg" alt="blogger"></a></li>
+          <li><a href="#"><img src="img/social-media.svg" alt="instagram"></a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <img src="img/logo.svg" alt="psicólogos perú" class="mini-logo">
+        <div class="contact-info">
+          <ul>
+            <li><span>(01)452-7913</span></li>
+            <li><span>citas@psicologosperu.com</span></li>
+            <li><span>Av. Arequipa 769 Lince</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">&copy; Psicólogos Perú 2016</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUsDbzIZ3r3n2IOkIS-VU_yvNIT0zod9k&callback=initMap"
+  async defer>
+  </script>
+</body>
+</html>
